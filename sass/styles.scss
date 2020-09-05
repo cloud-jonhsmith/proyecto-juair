@@ -1,0 +1,99 @@
+/* ESTILOS GENERALES */
+body {
+    font-family: Arial;
+}
+
+/* HEADER */
+.header-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    margin: auto;
+}
+.nav-menu {
+    margin: auto;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    li {
+        line-height: 48px;
+        position: relative;
+    }
+
+    li > ul {
+        text-align: left;
+    }
+    
+    li ul {
+        position: absolute;
+    }
+    
+    a {
+        color: #ddd;
+        display: block;
+        padding: 0 40px;
+        text-decoration: none;
+        transition: .4s;
+        width: 140px;
+    }
+
+    a:hover {
+        background: rgba(0,0,0,.5);
+    }
+    
+    li ul {
+        /* display: none; */
+        top: -350px;
+    }
+    
+    li:hover > ul {
+        display: block;
+        top: 100%;
+        transition: .4s;
+    }
+    /* PRIMER NIVEL MENU*/
+    ul {
+        background: #333;
+        display: table;
+        width: 100%;
+    }
+    
+    ul > li {
+        float: left;
+        z-index: 10;
+    }
+}
+
+
+/* SEGUNDO NIVEL */
+
+.nav-menu li li {
+    background: #222;
+    transition: all .5s;
+    width: 185px;
+}
+
+nav li:hover > ul > li {
+    max-height: 500px;
+    overflow: visible;
+}
+
+nav > ul > li > ul {
+    top: 100%;
+}
+
+/* SLIDESHOW */
+img {
+    clip-path: inset(0 0 20% 0);
+}
+.w3-content > img {
+    display: block;
+    margin: auto;
+}
+.w3-animate-fading{animation:fading 10s infinite}
+@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}

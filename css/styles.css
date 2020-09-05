@@ -1,0 +1,104 @@
+/* ESTILOS GENERALES */
+body {
+  font-family: Arial;
+}
+
+/* HEADER */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.nav-menu {
+  margin: auto;
+  text-align: center;
+  /* PRIMER NIVEL MENU*/
+}
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.nav-menu li {
+  line-height: 48px;
+  position: relative;
+}
+.nav-menu li > ul {
+  text-align: left;
+}
+.nav-menu li ul {
+  position: absolute;
+}
+.nav-menu a {
+  color: #ddd;
+  display: block;
+  padding: 0 40px;
+  text-decoration: none;
+  transition: 0.4s;
+  width: 140px;
+}
+.nav-menu a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.nav-menu li ul {
+  /* display: none; */
+  top: -350px;
+}
+.nav-menu li:hover > ul {
+  display: block;
+  top: 100%;
+  transition: 0.4s;
+}
+.nav-menu ul {
+  background: #333;
+  display: table;
+  width: 100%;
+}
+.nav-menu ul > li {
+  float: left;
+  z-index: 10;
+}
+
+/* SEGUNDO NIVEL */
+.nav-menu li li {
+  background: #222;
+  transition: all 0.5s;
+  width: 185px;
+}
+
+nav li:hover > ul > li {
+  max-height: 500px;
+  overflow: visible;
+}
+
+nav > ul > li > ul {
+  top: 100%;
+}
+
+/* SLIDESHOW */
+img {
+  -webkit-clip-path: inset(0 0 20% 0);
+          clip-path: inset(0 0 20% 0);
+}
+
+.w3-content > img {
+  display: block;
+  margin: auto;
+}
+
+.w3-animate-fading {
+  animation: fading 10s infinite;
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
